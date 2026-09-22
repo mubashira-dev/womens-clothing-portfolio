@@ -44,6 +44,7 @@ body{
 }
 .right{
   width:48%;
+  height:auto;
   background:#fdfaf3;
   padding-left:70px;
   padding-right:50px;
