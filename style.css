@@ -13,10 +13,12 @@ body{
 .hero{
   display:flex;
   height:auto;
+  min-height:auto;
   background:#fdfaf3;
-  overflow:hidden;
-  border-radius:6px;
+  overflow:visible;
+  border-radius:10px;
   position:relative;
+  align-items:center;
 }
 .left{
   width:52%;
