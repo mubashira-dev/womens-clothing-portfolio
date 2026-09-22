@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&family=Poppins:wght@400;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:'Poppins', sans-serif;
+  background:#c06a6a;
+  padding:12px;
+}
+.hero{
+  display:flex;
+  height:88vh;
+  background:#fdfaf3;
+  overflow:hidden;
+  border-radius:6px;
+  position:relative;
+}
+.left{
+  width:52%;
+  position:relative;
+  background:white;
+}
+.left img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:top;
+  display:block;
+}
+.left::after{
+  content:'';
+  position:absolute;
+  right:-1px;
+  top:0;
+  width:90px;
+  height:100%;
+  background:#e8b99a;
+  clip-path: ellipse(65% 55% at 100% 50%);
+}
+.right{
+  width:48%;
+  background:#fdfaf3;
+  padding-left:70px;
+  padding-right:50px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  z-index:2;
+}
+.right h1{
+  font-family:'Playfair Display', serif;
+  font-size:80px;
+  color:#5a352a;
+  line-height:1;
+  letter-spacing:0.5px;
+  font-weight:700;
+}
+.right h1 span{
+  font-weight:400;
+  color:#8d6a5a;
+}
+.tagline{
+  font-family:'Great Vibes', cursive;
+  font-size:22px;
+  color:#b07a60;
+  margin:6px 0 28px 2px;
+}
+.features{
+  display:flex;
+  flex-direction:column;
+  gap:13px;
+}
+.f{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-size:10.5px;
+  letter-spacing:1.2px;
+  font-weight:600;
+  color:#6b4a3e;
+}
+.f .icon{
+  width:28px;
+  height:28px;
+  border:1px solid #e0c4b3;
+  background:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:10px;
+}
+.brush{
+  background:#f3d8c9;
+  padding:8px 22px;
+  width:fit-content;
+  margin:28px 0 18px;
+  transform:rotate(-2deg);
+  border-radius:2px;
+}
+.brush b{
+  font-family:'Playfair Display', serif;
+  font-size:12px;
+  letter-spacing:1px;
+  color:#4a2f26;
+}
+.brush i{
+  font-family:'Great Vibes', cursive;
+  color:#c06a6a;
+  margin-left:8px;
+  font-size:20px;
+}
+.bottom{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1.2px;
+  line-height:1.3;
+  color:#4a2f26;
+}
+.bottom span{
+  font-family:'Great Vibes', cursive;
+  font-size:28px;
+  font-weight:400;
+  color:#4a2f26;
+  text-transform:none;
+  letter-spacing:0;
+}
+.btn{
+  margin-top:16px;
+  background:#2e2e2e;
+  color:#fff;
+  border:none;
+  padding:9px 22px;
+  border-radius:22px;
+  font-size:11px;
+  letter-spacing:0.5px;
+  width:fit-content;
+  cursor:pointer;
+}
+
+.collection{
+  background:#c06a6a;
+  padding:45px 35px;
+  margin-top:12px;
+  border-radius:6px;
+}
+.collection h2{
+  text-align:center;
+  font-family:'Playfair Display', serif;
+  font-size:28px;
+  margin-bottom:28px;
+  color:#5a352a;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.card{
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  padding-bottom:10px;
+}
+.card img{
+  width:100% ;
+  height:auto;
+  object-fit:contain;
+  background:#fffff2 ;
+  display: block;
+}
+.card p{
+  text-align: center;
+  font-size:11px;
+  font-weight:600;
+  margin-top:8px;
+  padding:0 5px ;
+}
+@media (max-width: 768px) {
+  .hero {
+    display: block !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  .hero > div:first-child,
+  .hero .image,
+  .hero .left {
+    width: 100% !important;
+    height: 350px !important;
+    position: static !important;
+    display: block !important;
+  }
+  .hero img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .hero .shape, .hero .curve, .hero [style*="border-radius"] {
+    display: none !important;
+  }
+  .hero > div:last-child,
+  .hero .content,
+  .hero .right {
+    width: 100% !important;
+    position: static !important;
+    padding: 25px 20px !important;
+    background: #fffaf5 !important;
+  }
+  .hero h1, .hero h2 {
+    font-size: 26px !important;
+    text-align: left !important;
+    line-height: 1.3 !important;
+  }
+  .collection, .products, .cards, .grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 15px !important;
+  }
+  .card, .product-card {
+    width: 100% !important;
+  }
+}
